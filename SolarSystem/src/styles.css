@@ -1,1 +1,247 @@
-/* You can add global styles to this file, and also import other style files */
+/* ------------------------------------- */
+/* -----------Planets------------------- */
+/* ------------------------------------- */
+
+
+@import url("https://fonts.googleapis.com/css?family=Cute+Font&display=swap");
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #221713;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin: 0;
+}
+
+*:before, *:after {
+  position: absolute;
+  content: "";
+}
+
+.planet {
+  width: 870px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.pluton {
+  position: absolute;
+  width: 150px;
+  height: 160px;
+  top: 200px;
+}
+
+.mercure {
+  position: absolute;
+  left: 105px;
+  top: 60px;
+  width: 75px;
+  height: 85px;
+}
+
+.venus {
+  position: absolute;
+  left: 195px;
+  top: 100px;
+  width: 85px;
+  height: 95px;
+}
+
+.terre {
+  position: absolute;
+  left: 275px;
+  top: 255px;
+  width: 90px;
+  height: 100px;
+}
+
+.mars {
+  position: absolute;
+  left: 335px;
+  top: 60px;
+  width: 85px;
+  height: 95px;
+}
+.jupiter {
+  position: absolute;
+  left: 440px;
+  top: 130px;
+  width: 105px;
+  height: 115px;
+}
+
+.saturne {
+  position: absolute;
+  left: 550px;
+  top: 255px;
+  width: 90px;
+  height: 100px;
+}
+.uranus {
+  position: absolute;
+  left: 640px;
+  top: 100px;
+  width: 90px;
+  height: 100px;
+}
+
+.neptune {
+  position: absolute;
+  left: 755px;
+  top: 50px;
+  width: 105px;
+  height: 115px;
+}
+
+.toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+
+.text {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  z-index: 10;
+  font-weight: bold;
+  font-family: "Cute Font", cursive;
+  font-size: 50px;
+}
+.text p {
+  color: #fff;
+  margin: 0;
+}
+
+
+
+
+/* ------------------------------------- */
+/* -----------Background---------------- */
+/* ------------------------------------- */
+
+
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color:rgba(33, 33, 33, 0.9);
+  color:#ffffff;
+  display:block;
+  font: 14px/1.3 Arial,sans-serif;
+  height:50px;
+  position:relative;
+  z-index:5;
+}
+
+h2{
+  margin-top: 30px;
+  text-align: center;
+}
+header h2{
+  font-size: 22px;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 80%;
+  text-align: center;
+}
+header a, a:visited {
+  text-decoration:none;
+  color:#fcfcfc;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+  from {background-position: 0;}
+  to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:100%;
+height:100%;
+display:block;
+}
+
+.stars {
+background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+z-index:0;
+}
+
+.twinkling{
+background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+z-index:1;
+
+-moz-animation:move-twink-back 200s linear infinite;
+-ms-animation:move-twink-back 200s linear infinite;
+-o-animation:move-twink-back 200s linear infinite;
+-webkit-animation:move-twink-back 200s linear infinite;
+animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+  z-index:3;
+
+-moz-animation:move-clouds-back 200s linear infinite;
+-ms-animation:move-clouds-back 200s linear infinite;
+-o-animation:move-clouds-back 200s linear infinite;
+-webkit-animation:move-clouds-back 200s linear infinite;
+animation:move-clouds-back 200s linear infinite;
+}
+
+
+
+
+/* ------------------------------------- */
+/* ---------------Mix------------------- */
+/* ------------------------------------- */
