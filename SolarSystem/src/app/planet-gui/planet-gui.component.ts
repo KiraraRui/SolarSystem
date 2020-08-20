@@ -10,12 +10,19 @@ import { Planets} from '../planets';
 export class PlanetGuiComponent implements OnInit {
 
   planets : Planets[]
+  currentPlanet : Planets;
   constructor(private planetServiceService : PlanetserviceService) { 
     this.planets = planetServiceService.planets;
     console.log(this.planets);
+    this.currentPlanet = new Planets(0,'','',0,0,0,0,0,'');
   }
 
   ngOnInit(): void {
   }
 
+ currentPlanetSetter(planet : Planets){
+console.log(planet.englishName);
+this.currentPlanet = planet;
+
+ }
 }

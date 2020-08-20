@@ -1,8 +1,13 @@
-<div *ngFor="let planet of planets " >
-    <app-planet [planet]="planet"></app-planet>  
+<div class="planet">
+  <div *ngFor="let planet of planets">
+    <app-planet (output)="currentPlanetSetter($event)" [planet]="planet"></app-planet>
+  </div>
 </div>
-<!-- i only need 9 planets not everything else, so implement-->
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <div class="clouds"></div>
-    
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+
+<div class="description">
+    <h2>{{currentPlanet.englishName}}</h2>
+    <p>{{currentPlanet.description}}</p>
+  </div>

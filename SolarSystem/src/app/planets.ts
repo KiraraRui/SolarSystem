@@ -12,6 +12,7 @@ vol: number;
 density: number;
 gravity: number;
 aroundPlanet: string;
+description: string;
 
 constructor(id: number, name: string, englishName: string, moons: number, mass: number, vol: number, density: number, gravity: number, aroundPlanet: string){
 
@@ -25,10 +26,11 @@ constructor(id: number, name: string, englishName: string, moons: number, mass: 
     this.density = density;
     this.gravity = gravity;
     this.aroundPlanet = aroundPlanet;
-    
-    
-    
-    
-    
+   
+    }
+
+    addDescription(input: string){
+this.description = input;
+
     }
 }
