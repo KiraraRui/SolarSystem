@@ -7,11 +7,8 @@ import {Planets} from './planets';
 })
 export class PlanetserviceService {
   constructor(private httpClient: HttpClient) {
-    this.MapData();
-    console.log(this.planets); // delete
-    // this.addInfo();
-    console.log(this.planets);
-
+    this.MapData();    
+    this.addInfo();
 }
 
 request;
@@ -27,7 +24,7 @@ MapData(): void {
         if (this.request.bodies[index].id == this.wantedPlanets[i]) {
           let tempPlanet = new Planets(
             this.request.bodies[index].id,
-            this.request.bodies[index].name,
+            this.request.bodies[index].name,  
             this.request.bodies[index].englishName,
           this.request.bodies[index].moons,
           this.request.bodies[index].mass,
@@ -37,28 +34,30 @@ MapData(): void {
           this.request.bodies[index].aroundPlanet
           
           );
-          this.planets.push(tempPlanet);
+         this.planets.push(tempPlanet);
+        //  console.log(this.planets.length);
         }
       }
     }
   });
 }
 
-// addInfo() : void {
-//   console.log('YO ADD INFO BEGINS HERE BITCH'); // delete
-//   console.log(this.planets.length); // delete shows 0 but is 8
-//   console.log(this.wantedPlanets.length); // delete shows and is 8
-//   for (let i = 0; i < this.planets.length; i++) {
-//     for (let j = 0; j < this.wantedPlanets.length; j++) {
-//       console.log('they are equal; ');
-//      if (this.planets[i].englishName == this.wantedPlanets[j]) {
-//        this.planets[i].addDescription(this.PlanetDescription[j] + this.planets[i].englishName + ' has ' + this.planets[i].moons + ' moons and a mass of ' + this.planets[i].mass + ' and a vol of ' + this.planets[i].vol + ', it has a density of ' + this.planets[i].density + ' it also has a gravity on ' + this.planets[i].gravity + ' and orbits around the planet ' + this.planets[i].aroundPlanet + '.');
-//      }
+addInfo() : void {
+  console.log('YO ADD INFO BEGINS HERE BITCH'); // delete
+  console.log(this.planets.length); // delete shows 0 but is 8
+  console.log(this.wantedPlanets.length); // delete shows and is 8
+  for (let i = 0; i < this.planets.length; i++) {
+    for (let j = 0; j < this.wantedPlanets.length; j++) {
+      console.log('they are equal; ');
+     if (this.planets[i].englishName == this.wantedPlanets[j]) {
+       this.planets[i].addDescription(this.PlanetDescription[j] + this.planets[i].englishName + ' has ' + this.planets[i].moons + ' moons and a mass of ' + this.planets[i].mass + ' and a vol of ' + this.planets[i].vol + ', it has a density of ' + this.planets[i].density + ' it also has a gravity on ' + this.planets[i].gravity + ' and orbits around the planet ' + this.planets[i].aroundPlanet + '.');
+     }
       
-//     }
+    }
     
-//   }
-// }
+  }
+}
+
 }
 
 // + this.planets[i].englishName == this.wantedPlanets[j]
@@ -82,4 +81,7 @@ Saturn is a gas giant made up mostly of hydrogen and helium, and it is the secon
 
 Uranus is blue-green in color, as a result of the methane in its mostly hydrogen-helium atmosphere. The planet is often dubbed an ice giant, since at least 80% of its mass is a fluid mix of water, methane and ammonia ice
 
-Neptune is very similar to Uranus. It's made of a thick soup of water, ammonia, and methane over an Earth-sized solid center. Its atmosphere is made of hydrogen, helium, and methane. The methane gives Neptune the same blue color as Uranus.*/
+Neptune is very similar to Uranus. It's made of a thick soup of water, ammonia, and methane over an Earth-sized solid center. Its atmosphere is made of hydrogen, helium, and methane. The methane gives Neptune the same blue color as Uranus.
+
+// brug https://angular.io/tutorial/toh-pt4
+*/
